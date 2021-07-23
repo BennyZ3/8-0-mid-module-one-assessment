@@ -98,7 +98,7 @@ function getMostCommonAnimal(animals) {
   let result = {}
   if (animals.length === 0){//if check for empty case
     result = null
-  }else {//Otherwiae just setting up first animal as default
+  }else {//Otherwise just setting up first animal as default
     result = animals[0]
   }
   for (let i = 1; i < animals.length; i++){
