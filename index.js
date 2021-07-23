@@ -106,9 +106,6 @@ function getMostCommonAnimal(animals) {
       result = animals[i]
     }
   }
-  if (!animals){
-    result = null
-  }
   return result
 }
 
