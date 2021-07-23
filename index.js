@@ -28,7 +28,7 @@ const animals = [
  */
 function getTotalCount(animals) {
   let result = 0
-  for (let ani of animals){
+  for (let ani of animals){//adding all together
     result += ani.count
   }
   return result
@@ -48,7 +48,7 @@ function getTotalCount(animals) {
  */
 function getAllKinds(animals) {
   let result = []
-  for (let ani of animals){
+  for (let ani of animals){//adding everything in
     result.push(ani.kind)
   }
   return result
@@ -74,7 +74,7 @@ function getAllKinds(animals) {
 function filterByCountMinimum(animals, minimum) {
   let result = []
   for (let ani of animals){
-    if (ani.count >= minimum){
+    if (ani.count >= minimum){ //Check for minimum count and push as needed
       result.push(ani)
     }
   }
@@ -96,13 +96,13 @@ function filterByCountMinimum(animals, minimum) {
  */
 function getMostCommonAnimal(animals) {
   let result = {}
-  if (animals.length === 0){
+  if (animals.length === 0){//if check for empty case
     result = null
-  }else {
+  }else {//Otherwiae just setting up first animal as default
     result = animals[0]
   }
   for (let i = 1; i < animals.length; i++){
-    if (animals[i].count > result.count){
+    if (animals[i].count > result.count){ //comparing counts and replacing as needed
       result = animals[i]
     }
   }
