@@ -95,12 +95,13 @@ function filterByCountMinimum(animals, minimum) {
  * getMostCommonAnimal([]); //> null // returns null if the input is empty
  */
 function getMostCommonAnimal(animals) {
-  let result = {}
-  if (animals.length === 0){//if check for empty case
-    result = null
-  }else {//Otherwise just setting up first animal as default
-    result = animals[0]
-  }
+  // let result = {}
+  // if (animals.length === 0){//if check for empty case
+  //   result = null
+  // }else {//Otherwise just setting up first animal as default
+  //   result = animals[0]
+  // }
+  let result = animals[0] || null  //Alternate solution with or check
   for (let i = 1; i < animals.length; i++){
     if (animals[i].count > result.count){ //comparing counts and replacing as needed
       result = animals[i]
